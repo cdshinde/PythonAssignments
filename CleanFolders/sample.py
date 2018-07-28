@@ -1,4 +1,4 @@
-from CleanFolders import ProcessImage as ps
+from CleanFolders import ManageImages as mi
 import os
 import datetime
 
@@ -9,7 +9,7 @@ def test_copy_action():
     folder_date = datetime.datetime.today().strftime('%Y-%m-%d')
     destination_path = destination_path + "/" + folder_date
 
-    process = ps.ProcessImage(source_path, destination_path)
+    process = mi.ManageImages(source_path, destination_path)
 
     for name, dirName in process.get_image_files():
         print(dirName)

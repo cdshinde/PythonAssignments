@@ -10,7 +10,7 @@ import shutil
 import datetime
 
 
-class ProcessImage:
+class ManageImages:
 
     def __init__(self, source_path, destination):
         print("This is the constructor method.")
@@ -60,7 +60,7 @@ def main():
     folder_date = datetime.datetime.today().strftime('%Y-%m-%d')
     destination_path = destination_path + "/" + folder_date
 
-    process = ProcessImage(source_path, destination_path)
+    process = ManageImages(source_path, destination_path)
 
     for name, dirName in process.get_image_files():
         print(dirName)
